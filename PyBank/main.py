@@ -10,7 +10,7 @@ previous_rev=0
 rev_change=0
 change_month=[]
 rev_change_list=[]
-gt_increase=["",0] #so it starts at the beinning month and anything >0
+gt_increase=["",0] #so it starts at the beginning month and anything >0
 gt_decrease=["",9999999999999999999] #so it tracks the whichever month and anything < the second number
 net_total=0
 with open(budget_pth) as budget_data:
@@ -34,7 +34,6 @@ with open(budget_pth) as budget_data:
 
 #avg change in revenue
 average_rev=sum(rev_change_list)/len(rev_change_list)
-
 
 #print all the above results and then "write" to a text file
 output=(
