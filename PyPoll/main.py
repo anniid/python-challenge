@@ -35,21 +35,19 @@ f"-----------------------------\n")
 print(election_rs_pt1)
 # then calculate  percentage of the vote per candidate and the winner based on the popular votes (aka, who had the highest percentage)
 with open(election_output, "w") as txtfile:
-    txtfile.write(election_rs_pt1)
+    txtfile.write(election_rs_pt1) #don't need to loop this, so adding it here before I forget.
     for candidate in candidate_vote_count:
         votes=candidate_vote_count.get(candidate)
         share_of_votes= float(votes)/float(total_votes)*100
         candidate_rs= f"{candidate}: {share_of_votes:.2f}% ({votes})\n"
         print(candidate_rs)
-        txtfile.write(candidate_rs)
+        txtfile.write(candidate_rs) #so it prints EVERY candidate instead of just the last one.
         #this is where we find the winner!!!!
         if (votes>winner_count):
             winner_count=votes
             winner=candidate
 
-
 #then print results in the terminal and in a separate text file.
-
 
     election_rs_pt2=(
     f"-----------------------------\n"
